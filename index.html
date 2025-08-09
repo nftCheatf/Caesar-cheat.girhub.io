@@ -3,959 +3,1723 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silan CHEATS - Лучший чит для PUBG Mobile</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>CAESAR SOFT 3.9v - Чит для игр</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
-        /* Добавлен фоновый градиент для всего сайта */
-        body {
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            background-attachment: fixed;
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --danger: #ef4444;
+            --success: #10b981;
+            --dark: #0f172a;
+            --darker: #020617;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --dark-gray: #334155;
         }
         
-        @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Orbitron:wght@400;700&display=swap');
-        
-        .hero-bg {
-            background-image: url('https://i.imgur.com/JYwzvLm.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        .hero-bg::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(58,12,163,0.6) 100%);
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        .title-font {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-        .pink-text {
-            color: #FF00A8;
-            text-shadow: 0 0 10px #FF00A8, 0 0 20px rgba(255,0,168,0.7);
-        }
-        .blue-text {
-            color: #00B4FF;
-            text-shadow: 0 0 10px #00B4FF, 0 0 20px rgba(0,180,255,0.7);
-        }
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { 
-                transform: scale(1); 
-                box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.7);
-            }
-            70% { 
-                transform: scale(1.05);
-                box-shadow: 0 0 0 15px rgba(138, 43, 226, 0);
-            }
-            100% { 
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(138, 43, 226, 0);
-            }
-        }
-        .fade-in {
-            animation: fadeIn 1.5s ease-in;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .marquee {
-            white-space: nowrap;
-            overflow: hidden;
+        * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
-        .marquee span {
+
+        body {
+            background-color: var(--darker);
+            color: var(--light);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 25%),
+                radial-gradient(circle at 90% 80%, rgba(239, 68, 68, 0.15) 0%, transparent 25%);
+            background-attachment: fixed;
+            line-height: 1.6;
+        }
+
+        /* Шапка с бегущей строкой */
+        .marquee {
+            background: linear-gradient(90deg, var(--dark), var(--darker));
+            padding: 12px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .marquee-content {
             display: inline-block;
             padding-left: 100%;
-            animation: marquee 15s linear infinite;
+            animation: marquee 20s linear infinite;
+            color: var(--primary);
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
         }
+
+        .marquee-content span {
+            color: var(--light);
+            margin: 0 15px;
+        }
+
         @keyframes marquee {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(-100%, 0); }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
         }
-        .feature-card {
-            transition: all 0.3s ease;
+
+        /* Главный баннер */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
             position: relative;
             overflow: hidden;
+            background: 
+                linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(2, 6, 23, 0.95) 100%);
         }
-        .feature-card::before {
-            content: '';
+
+        .hero::before {
+            content: "";
             position: absolute;
             top: -50%;
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(138, 43, 226, 0.2), transparent);
-            transform: rotate(45deg);
+            background: 
+                radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%),
+                repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 5px);
+            animation: rotate 60s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, #fff, #c7d2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
             z-index: 1;
+            line-height: 1.2;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 40px auto;
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        .feature {
+            background: rgba(30, 41, 59, 0.6);
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .feature:hover {
+            background: rgba(51, 65, 85, 0.7);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.2);
+            border-color: var(--primary);
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            padding: 14px 36px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            animation: pulse 2s infinite 1s;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.3s;
+            z-index: -1;
         }
-        .feature-card:hover::before {
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn:hover::before {
             opacity: 1;
-            animation: shine 1.5s;
         }
-        @keyframes shine {
-            0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 0; }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+            70% { box-shadow: 0 0 0 12px rgba(99, 102, 241, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
         }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.5);
+
+        /* Почему мы */
+        .why-us {
+            padding: 100px 20px;
+            position: relative;
+            background: 
+                linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.98)));
         }
-        .price-card {
-            transition: all 0.3s ease;
+
+        .why-us h2 {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            color: var(--light);
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .why-us h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--danger));
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: rgba(30, 41, 59, 0.6);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
         }
-        .price-card::before {
-            content: '';
+
+        .card::before {
+            content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, #8A2BE2, #1E90FF);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
+            background: linear-gradient(90deg, var(--primary), var(--danger));
+            opacity: 0;
+            transition: opacity 0.3s;
         }
-        .price-card:hover::before {
-            transform: scaleX(1);
+
+        .card:hover::before {
+            opacity: 1;
         }
-        .price-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.3);
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.3), 0 10px 10px -5px rgba(15, 23, 42, 0.1);
+            border-color: rgba(99, 102, 241, 0.4);
+            background: rgba(30, 41, 59, 0.8);
         }
-        .glow {
-            text-shadow: 0 0 10px currentColor;
+
+        .card i {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--danger));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: transform 0.3s;
         }
-        .cyber-border {
+
+        .card:hover i {
+            transform: scale(1.1);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--light);
+        }
+
+        .card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Установка */
+        .installation {
+            padding: 100px 20px;
+            background: 
+                linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.98)));
             position: relative;
-            border: 2px solid transparent;
-            background-clip: padding-box;
         }
-        .cyber-border::after {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, #8A2BE2, #1E90FF, #8A2BE2);
-            z-index: -1;
-            border-radius: inherit;
-        }
-        .btn-gradient {
-            background: linear-gradient(135deg, #8A2BE2 0%, #1E90FF 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .btn-gradient::before {
-            content: '';
+
+        .installation::before {
+            content: "";
             position: absolute;
             top: 0;
-            left: -100%;
+            left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: all 0.6s;
+            background: 
+                radial-gradient(circle at 70% 30%, rgba(239, 68, 68, 0.1) 0%, transparent 30%),
+                repeating-linear-gradient(-45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 5px);
+            pointer-events: none;
         }
-        .btn-gradient:hover::before {
-            left: 100%;
+
+        .installation h2 {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .installation h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--danger));
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 60px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .step {
+            text-align: center;
+            max-width: 180px;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+            position: relative;
+        }
+
+        .step::after {
+            content: "→";
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary);
+            font-size: 1.8rem;
+            opacity: 0.6;
+        }
+
+        .step:last-child::after {
+            display: none;
+        }
+
+        .step:nth-child(1) { animation-delay: 0.2s; }
+        .step:nth-child(2) { animation-delay: 0.4s; }
+        .step:nth-child(3) { animation-delay: 0.6s; }
+        .step:nth-child(4) { animation-delay: 0.8s; }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .step-icon {
+            background: rgba(30, 41, 59, 0.8);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2.5rem;
+            border: 2px solid rgba(99, 102, 241, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            color: var(--primary);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2);
+        }
+
+        .step:hover .step-icon {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.2);
+            border-color: var(--primary);
+            background: rgba(51, 65, 85, 0.8);
+            color: white;
+        }
+
+        .step h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--light);
+        }
+
+        .step p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Тарифы */
+        .pricing {
+            padding: 100px 20px;
+            position: relative;
+            background: 
+                linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.98)));
+        }
+
+        .pricing::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(99, 102, 241, 0.1) 0%, transparent 30%),
+                repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 5px);
+            pointer-events: none;
+        }
+
+        .pricing h2 {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .pricing h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--danger));
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Переключатель валют */
+        .currency-switcher {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 10px;
         }
         
-        /* Добавлены аватарки для отзывов */
-        .review-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
+        .currency-btn {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: var(--gray);
+            padding: 8px 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .currency-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .price-display {
+            display: none;
+        }
+        
+        .price-display.active {
+            display: block;
+        }
+        
+        .price-group {
+            margin-top: 10px;
+        }
+
+        .plans {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .plan {
+            background: rgba(30, 41, 59, 0.7);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        .plan::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--danger));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .plan:hover::before {
+            opacity: 1;
+        }
+
+        .plan:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.3), 0 10px 10px -5px rgba(15, 23, 42, 0.1);
+            border-color: rgba(99, 102, 241, 0.4);
+            background: rgba(30, 41, 59, 0.9);
+        }
+
+        .plan-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+        }
+
+        .plan-header::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 1px;
+        }
+
+        .plan-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--light);
+        }
+
+        .plan-price {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 25px 0 10px;
+            position: relative;
+            color: var(--light);
+        }
+
+        .plan-price::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: var(--primary);
+            margin: 15px 0;
+            border-radius: 1px;
+        }
+
+        .plan-features {
+            margin: 25px 0;
+            list-style: none;
+        }
+
+        .plan-features li {
+            margin-bottom: 12px;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .plan-features li::before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .plan-savings {
+            color: var(--success);
+            font-weight: 600;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .plan-savings::before {
+            content: "⬇️";
+        }
+
+        .plan-btn {
+            width: 100%;
+            padding: 14px;
+            border-radius: 50px;
+            border: none;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            z-index: 1;
+        }
+
+        .plan-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
+        }
+
+        .plan-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.4);
+        }
+
+        .plan-btn:hover::before {
+            opacity: 1;
+        }
+
+        .plan.lifetime {
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            background: rgba(30, 41, 59, 0.7);
+        }
+
+        .plan.lifetime::before {
+            background: linear-gradient(90deg, var(--danger), #f97316);
+        }
+
+        .plan.lifetime:hover {
+            border: 1px solid rgba(239, 68, 68, 0.5);
+            box-shadow: 0 20px 25px -5px rgba(239, 68, 68, 0.1), 0 10px 10px -5px rgba(239, 68, 68, 0.1);
+            background: rgba(30, 41, 59, 0.9);
+        }
+
+        .plan.lifetime .plan-btn {
+            background: linear-gradient(135deg, var(--danger), #dc2626);
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+        }
+
+        .plan.lifetime .plan-btn::before {
+            background: linear-gradient(135deg, #dc2626, var(--danger));
+        }
+
+        .plan.lifetime .plan-btn:hover {
+            box-shadow: 0 10px 20px -5px rgba(239, 68, 68, 0.4);
+        }
+
+        .plan.lifetime .plan-name {
+            color: white;
+            position: relative;
+        }
+
+        .plan.lifetime .plan-name::after {
+            content: "VIP";
+            position: absolute;
+            top: -10px;
+            right: -30px;
+            background: var(--danger);
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 100px 20px;
+            background: 
+                linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.98)));
+            position: relative;
+        }
+
+        .faq::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 30%),
+                repeating-linear-gradient(-45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 5px);
+            pointer-events: none;
+        }
+
+        .faq h2 {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .faq h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--danger));
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(30, 41, 59, 0.7);
+            margin-bottom: 15px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--light);
+            transition: all 0.3s;
+            background: rgba(51, 65, 85, 0.3);
+        }
+
+        .faq-question:hover {
+            background: rgba(51, 65, 85, 0.5);
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            color: var(--primary);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "-";
+            color: var(--danger);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            color: var(--gray);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 300px;
+        }
+
+        /* Скриншоты */
+        .screenshots {
+            padding: 100px 20px;
+            position: relative;
+            background: 
+                linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.98)));
+        }
+
+        .screenshots::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 70% 30%, rgba(239, 68, 68, 0.1) 0%, transparent 30%),
+                repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 5px);
+            pointer-events: none;
+        }
+
+        .screenshots h2 {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .screenshots h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--danger));
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .slider-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--dark);
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            border: 2px solid #8A2BE2;
+        }
+
+        .slider-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .slider-dot.active {
+            background: var(--primary);
+            transform: scale(1.2);
+        }
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+        }
+
+        .slider-arrow:hover {
+            background: var(--primary);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-arrow.prev {
+            left: 20px;
+        }
+
+        .slider-arrow.next {
+            right: 20px;
+        }
+
+        /* Отзывы */
+        .testimonials {
+            padding: 100px 20px;
+            position: relative;
+            background: 
+                linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.98)));
+        }
+
+        .testimonials::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(99, 102, 241, 0.1) 0%, transparent 30%),
+                repeating-linear-gradient(-45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 5px);
+            pointer-events: none;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .testimonials h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--danger));
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .review {
+            background: rgba(30, 41, 59, 0.7);
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        .review:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.3), 0 10px 10px -5px rgba(15, 23, 42, 0.1);
+            border-color: rgba(99, 102, 241, 0.4);
+            background: rgba(30, 41, 59, 0.9);
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--light);
+            position: relative;
+            padding-left: 25px;
+            line-height: 1.7;
+        }
+
+        .review-text::before {
+            content: """;
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 3rem;
+            line-height: 1;
+            color: rgba(99, 102, 241, 0.2);
+            font-family: serif;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--light);
+        }
+
+        .review-date {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* Контакты */
+        .contacts {
+            padding: 100px 20px;
+            position: relative;
+            background: 
+                linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.98)));
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .contacts::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 30%),
+                repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 5px);
+            pointer-events: none;
+        }
+
+        .contacts h2 {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .contacts h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--danger));
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+            background: rgba(30, 41, 59, 0.7);
+            padding: 15px 30px;
+            border-radius: 50px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        .contact-item:hover {
+            background: rgba(51, 65, 85, 0.8);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.2);
+            border-color: var(--primary);
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            color: #818cf8;
+            text-decoration: underline;
+        }
+
+        .contact-icon {
+            font-size: 1.3rem;
+            color: var(--primary);
+        }
+
+        /* Предупреждение */
+        .warning {
+            padding: 30px 20px;
+            background: linear-gradient(90deg, rgba(239, 68, 68, 0.8), rgba(220, 38, 38, 0.8));
+            text-align: center;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            font-weight: 500;
+        }
+
+        .warning::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(45deg, rgba(255,255,255,0.1) 0px, rgba(255,255,255,0.1) 1px, transparent 1px, transparent 10px);
+            pointer-events: none;
+        }
+
+        /* Футер */
+        footer {
+            padding: 30px 20px;
+            text-align: center;
+            background: var(--darker);
+            font-size: 0.9rem;
+            color: var(--gray);
+            position: relative;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            margin-top: 10px;
+        }
+
+        /* Анимации */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .steps {
+                gap: 30px;
+            }
+            
+            .step::after {
+                right: -25px;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .cards, .plans, .reviews {
+                grid-template-columns: 1fr;
+            }
+            
+            .steps {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+            
+            .step {
+                margin-bottom: 20px;
+                max-width: 220px;
+            }
+            
+            .step::after {
+                content: "↓";
+                right: auto;
+                top: auto;
+                bottom: -30px;
+                left: 50%;
+                transform: translateX(-50%) rotate(0);
+            }
+            
+            .slider {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .feature {
+                font-size: 0.85rem;
+                padding: 8px 15px;
+            }
+            
+            .btn {
+                padding: 12px 28px;
+                font-size: 1rem;
+            }
+            
+            .slider {
+                height: 300px;
+            }
+            
+            .contact-item {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
-<body class="text-white">
-    <!-- Бегущая строка -->
-    <div class="bg-gradient-to-r from-purple-800 to-blue-800 py-2 px-4">
-        <div class="marquee">
-            <span class="font-bold">
-                🚀 Новая версия 3.9v с улучшенным анти-баном! 🚀 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-                ⏳ Ограниченное предложение - успей купить! ⏳
-            </span>
+<body>
+    <!-- Шапка с бегущей строкой -->
+    <div class="marquee">
+        <div class="marquee-content">
+            🔥 <span>CAESAR SOFT 3.9v - Невидим для античита!</span> ⏳ <span>Последние 15 лицензий по спеццене!</span> 🚀 <span>Обновление 3.9 вышло!</span>
         </div>
     </div>
 
-    <!-- Навигация -->
-    <nav class="bg-gray-800 bg-opacity-90 sticky top-0 z-50 shadow-lg">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                    <i class="fas fa-fire text-blue-400 text-2xl glow"></i>
-                    <span class="title-font text-xl">
-                        <span class="pink-text">Silan</span> <span class="blue-text">CHEATS</span>
-                    </span>
-                </div>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#features" class="hover:text-blue-400 transition">Возможности</a>
-                    <a href="#install" class="hover:text-blue-400 transition">Установка</a>
-                    <a href="#pricing" class="hover:text-blue-400 transition">Цены</a>
-                    <a href="#faq" class="hover:text-blue-400 transition">FAQ</a>
-                    <a href="#contacts" class="hover:text-blue-400 transition">Контакты</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="menuBtn" class="text-white focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
+    <!-- Главный баннер -->
+    <section class="hero">
+        <h1 class="animate__animated animate__fadeInDown">CAESAR SOFT — ТВОЁ ПРЕИМУЩЕСТВО</h1>
+        <div class="features">
+            <div class="feature">🔒 Умный Aimbot 3.9</div>
+            <div class="feature">👁️ Невидимый Wallhack</div>
+            <div class="feature">🎯 Система No Recoil</div>
+            <div class="feature">⚡ FPS Разблокировка</div>
+            <div class="feature">📦 Авто-лут</div>
         </div>
-        <!-- Мобильное меню -->
-        <div id="mobileMenu" class="hidden md:hidden bg-gray-700">
-            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
-                <a href="#features" class="py-2 hover:text-blue-400 transition">Возможности</a>
-                <a href="#install" class="py-2 hover:text-blue-400 transition">Установка</a>
-                <a href="#pricing" class="py-2 hover:text-blue-400 transition">Цены</a>
-                <a href="#faq" class="py-2 hover:text-blue-400 transition">FAQ</a>
-                <a href="#contacts" class="py-2 hover:text-blue-400 transition">Контакты</a>
-            </div>
-        </div>
-    </nav>
+        <button class="btn animate__animated animate__pulse animate__infinite">Купить сейчас</button>
+    </section>
 
- <!-- Герой секция -->
-    <header class="hero-bg min-h-screen flex items-center justify-center">
-        <div class="hero-content container mx-auto px-4 text-center fade-in">
-            <h1 class="title-font text-4xl md:text-6xl lg:text-7xl mb-4">
-                <span class="pink-text glow">Silan</span> <span class="blue-text glow">CHEATS</span>
-            </h1>
-            <p class="text-xl md:text-2xl mb-8 font-medium">Лучший чит для PUBG Mobile без рут-доступа!</p>
-            
-            <div class="max-w-2xl mx-auto bg-gray-800 bg-opacity-70 rounded-lg p-6 mb-8 cyber-border">
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-400 mt-1 mr-2 glow"></i>
-                        <span>Авто-прицеливание (Aimbot)</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-400 mt-1 mr-2 glow"></i>
-                        <span>ESP (Сквозь стены)</span>  <!-- Изменено на ESP -->
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-400 mt-1 mr-2 glow"></i>
-                        <span>Нет отдачи (No Recoil)</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-400 mt-1 mr-2 glow"></i>
-                        <span>Разблокировка Фпс</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-400 mt-1 mr-2 glow"></i>
-                        <span>Dead Box</span>
-                    </li>
-                    <!-- Добавлены новые функции -->
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-400 mt-1 mr-2 glow"></i>
-                        <span>Скин хак (Skin hack)</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-400 mt-1 mr-2 glow"></i>
-                        <span>Memory</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-400 mt-1 mr-2 glow"></i>
-                        <span>Анти-обнаружение</span>
-                    </li>
-                </ul>
+    <!-- Почему мы -->
+    <section class="why-us">
+        <h2>Почему выбирают нас?</h2>
+        <div class="cards">
+            <div class="card animate__animated animate__fadeIn" data-wow-delay="0.1s">
+                <div>🔒</div>
+                <h3>Без root/jailbreak</h3>
+                <p>Полный функционал без необходимости взлома устройства</p>
             </div>
-            
-            <a href="https://t.me/SilanOwner" target="_blank" class="inline-block btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg pulse transition-all duration-300 transform hover:scale-105">
-                Купить сейчас <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-            
-            <div class="mt-12 animate-bounce">
-                <i class="fas fa-chevron-down text-2xl opacity-70"></i>
+            <div class="card animate__animated animate__fadeIn" data-wow-delay="0.2s">
+                <div>🛡️</div>
+                <h3>Защита от бана</h3>
+                <p>Уникальная система обхода античита с 97% успехом</p>
             </div>
-        </div>
-    </header>
-
-    <!-- Возможности -->
-    <section id="features" class="py-16 bg-gray-800 bg-opacity-80">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 title-font">
-                <span class="pink-text glow">Преимущества</span> <span class="blue-text glow">Silan Soft</span>
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Карточка 1 -->
-                <div class="feature-card bg-gray-700 rounded-lg p-6 transition-all duration-300 border border-transparent">
-                    <div class="text-blue-400 text-4xl mb-4 glow">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Без рут-доступа</h3>
-                    <p class="text-gray-300">Полный функционал без необходимости рутировать ваше устройство. Безопасно и просто!</p>
-                </div>
-                
-                <!-- Карточка 2 -->
-                <div class="feature-card bg-gray-700 rounded-lg p-6 transition-all duration-300 border border-transparent">
-                    <div class="text-blue-400 text-4xl mb-4 glow">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Защита от бана</h3>
-                    <p class="text-gray-300">Уникальная система маскировки делает обнаружение практически невозможным.</p>
-                </div>
-                
-                <!-- Карточка 3 -->
-                <div class="feature-card bg-gray-700 rounded-lg p-6 transition-all duration-300 border border-transparent">
-                    <div class="text-blue-400 text-4xl mb-4 glow">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Авто-обновления</h3>
-                    <p class="text-gray-300">Автоматические обновления после каждого патча PUBG Mobile. Всегда актуальная версия!</p>
-                </div>
-                
-                <!-- Карточка 4 -->
-                <div class="feature-card bg-gray-700 rounded-lg p-6 transition-all duration-300 border border-transparent">
-                    <div class="text-blue-400 text-4xl mb-4 glow">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Максимальный FPS</h3>
-                    <p class="text-gray-300">Оптимизация игры для плавного геймплея даже на слабых устройствах.</p>
-                </div>
-                
-                <!-- Карточка 5 -->
-                <div class="feature-card bg-gray-700 rounded-lg p-6 transition-all duration-300 border border-transparent">
-                    <div class="text-blue-400 text-4xl mb-4 glow">
-                        <i class="fas fa-cog"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Гибкие настройки</h3>
-                    <p class="text-gray-300">Каждый модуль можно настроить под ваш стиль игры для максимального комфорта.</p>
-                </div>
-                
-                <!-- Карточка 6 -->
-                <div class="feature-card bg-gray-700 rounded-lg p-6 transition-all duration-300 border border-transparent">
-                    <div class="text-blue-400 text-4xl mb-4 glow">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Поддержка 24/7</h3>
-                    <p class="text-gray-300">Наша команда всегда готова помочь с установкой и ответить на любые вопросы.</p>
-                </div>
+            <div class="card animate__animated animate__fadeIn" data-wow-delay="0.3s">
+                <div>🔄</div>
+                <h3>Авто-обновления</h3>
+                <p>Новые версии в течение 4-8 часов после патча игры</p>
+            </div>
+            <div class="card animate__animated animate__fadeIn" data-wow-delay="0.4s">
+                <div>⚡</div>
+                <h3>Макс FPS</h3>
+                <p>Оптимизация графики для плавного геймплея</p>
+            </div>
+            <div class="card animate__animated animate__fadeIn" data-wow-delay="0.5s">
+                <div>⚙️</div>
+                <h3>Гибкие настройки</h3>
+                <p>Интуитивный интерфейс с тонкой настройкой</p>
+            </div>
+            <div class="card animate__animated animate__fadeIn" data-wow-delay="0.6s">
+                <div>🕒</div>
+                <h3>Поддержка 24/7</h3>
+                <p>Помощь в любое время через Telegram</p>
             </div>
         </div>
     </section>
 
-    <!-- Как установить -->
-    <section id="install" class="py-16 bg-gray-900 bg-opacity-80">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 title-font">
-                <span class="blue-text glow">Как</span> <span class="pink-text glow">установить</span>
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                <!-- Шаг 1 -->
-                <div class="text-center">
-                    <div class="bg-gradient-to-r from-purple-700 to-blue-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold glow">1</div>
-                    <h3 class="font-bold mb-2">Скачать APK</h3>
-                    <p class="text-gray-400 text-sm">Получите файл после покупки в Telegram</p>
-                </div>
-                
-                <!-- Шаг 2 -->
-                <div class="text-center">
-                    <div class="bg-gradient-to-r from-purple-700 to-blue-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold glow">2</div>
-                    <h3 class="font-bold mb-2">Разрешить установку</h3>
-                    <p class="text-gray-400 text-sm">В настройках безопасности устройства</p>
-                </div>
-                
-                <!-- Шаг 3 -->
-                <div class="text-center">
-                    <div class="bg-gradient-to-r from-purple-700 to-blue-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold glow">3</div>
-                    <h3 class="font-bold mb-2">Запустить и активировать</h3>
-                    <p class="text-gray-400 text-sm">Следуйте инструкциям в приложении</p>
-                </div>
-                
-                <!-- Шаг 4 -->
-                <div class="text-center">
-                    <div class="bg-gradient-to-r from-purple-700 to-blue-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold glow">4</div>
-                    <h3 class="font-bold mb-2">Наслаждаться!</h3>
-                    <p class="text-gray-400 text-sm">Войдите в PUBG и почувствуйте разницу</p>
-                </div>
+    <!-- Установка -->
+    <section class="installation">
+        <h2>Установка за 4 шага</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-icon floating">📥</div>
+                <h3>Скачать</h3>
+                <p>5 секунд</p>
             </div>
-            
-            <div class="mt-16 bg-gray-800 rounded-lg p-6 max-w-4xl mx-auto cyber-border">
-                <div class="flex items-start">
-                    <div class="text-yellow-400 text-2xl mr-4 glow">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2 text-yellow-400">Важная информация</h3>
-                        <p class="text-gray-300">Для работы чита не требуется root-доступ, но необходимо каждый раз активировать его перед запуском игры. Используйте на свой страх и риск - мы не несем ответственности за возможные блокировки аккаунта. Рекомендуем играть умеренно и не злоупотреблять возможностями.</p>
-                    </div>
-                </div>
+            <div class="step">
+                <div class="step-icon floating">⚙️</div>
+                <h3>Установить</h3>
+                <p>2 клика</p>
+            </div>
+            <div class="step">
+                <div class="step-icon floating">🔑</div>
+                <h3>Активировать</h3>
+                <p>Ввод ключа</p>
+            </div>
+            <div class="step">
+                <div class="step-icon floating">🎮</div>
+                <h3>Играть</h3>
+                <p>Наслаждаться</p>
             </div>
         </div>
     </section>
 
-    <!-- Цены -->
-    <section id="pricing" class="py-16 bg-gray-800 bg-opacity-80">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 title-font">
-                <span class="pink-text glow">Наши</span> <span class="blue-text glow">цены</span>
-            </h2>
-            
-            <div class="flex justify-center mb-8">
-                <div class="inline-flex rounded-md shadow-sm">
-                    <button id="currencyUah" class="px-4 py-2 text-sm font-medium rounded-l-lg bg-blue-600 text-white focus:outline-none">
-                        🇺🇦 Гривна (UAH)
-                    </button>
-                    <button id="currencyUsd" class="px-4 py-2 text-sm font-medium bg-gray-700 text-white focus:outline-none">
-                        🇺🇸 Доллар (USD)
-                    </button>
-                    <button id="currencyRub" class="px-4 py-2 text-sm font-medium rounded-r-lg bg-gray-700 text-white focus:outline-none">
-                        🇷🇺 Рубль (RUB)
-                    </button>
+    <!-- Тарифы -->
+    <section class="pricing">
+        <h2>Тарифные планы</h2>
+        
+        <!-- Переключатель валют -->
+        <div class="currency-switcher">
+            <button class="currency-btn active" data-currency="uah">UAH</button>
+            <button class="currency-btn" data-currency="usd">USD</button>
+            <button class="currency-btn" data-currency="rub">RUB</button>
+        </div>
+        
+        <div class="plans">
+            <div class="plan">
+                <div class="plan-header">
+                    <span class="plan-name">1 ДЕНЬ</span>
                 </div>
+                <div class="price-group">
+                    <div class="price-display active" data-currency="uah">40 UAH</div>
+                    <div class="price-display" data-currency="usd">~1 USD</div>
+                    <div class="price-display" data-currency="rub">~80 RUB</div>
+                </div>
+                <button class="plan-btn">Купить</button>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                <!-- Тариф 1 -->
-                <div class="price-card bg-gray-700 rounded-lg overflow-hidden border border-gray-600 transition-all duration-300">
-                    <div class="bg-gradient-to-r from-purple-800 to-blue-800 py-4 px-6">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-xl font-bold">1 день</h3>
-                            <span class="bg-white text-purple-600 text-xs font-bold px-2 py-1 rounded-full"></span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-center mb-6">
-                            <span class="text-4xl font-bold uah-price">40</span>
-                            <span class="text-gray-400"> UAH</span>
-                            <div class="text-sm text-gray-400 mt-1 hidden usd-price">≈ 1 USD</div>
-                            <div class="text-sm text-gray-400 mt-1 hidden rub-price">≈ 80 RUB</div>
-                        </div>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-400 mr-2 glow"></i>
-                                <span>Полный функционал</span>
-                            </li>
-                        </ul>
-                         <a href="https://t.me/SilanOwner" target="_blank" class="block text-center btn-gradient text-white font-bold py-2 px-4 rounded transition">
-                            Заказать
-                        </a>
-                    </div>
+            <div class="plan">
+                <div class="plan-header">
+                    <span class="plan-name">3 ДНЯ</span>
                 </div>
-                
-                <!-- Тариф 2 -->
-                <div class="price-card bg-gray-700 rounded-lg overflow-hidden border border-gray-600 transition-all duration-300">
-                    <div class="bg-gradient-to-r from-purple-800 to-blue-800 py-4 px-6">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-xl font-bold">3 Дня</h3>
-                            <span class="bg-white text-purple-600 text-xs font-bold px-2 py-1 rounded-full">ВЫГОДА 5%</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-center mb-6">
-                            <span class="text-4xl font-bold uah-price">100</span>
-                            <span class="text-gray-400"> UAH</span>
-                            <div class="text-sm text-gray-400 mt-1 hidden usd-price">≈ 2.2USD</div>
-                            <div class="text-sm text-gray-400 mt-1 hidden rub-price">≈ 200 RUB</div>
-                        </div>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-400 mr-2 glow"></i>
-                                <span>Полный функционал</span>
-                            </li>
-                        </ul>
-                        <a href="https://t.me/SilanOwner" target="_blank" class="block text-center btn-gradient text-white font-bold py-2 px-4 rounded transition">
-                            Заказать
-                        </a>
-                    </div>
+                <div class="price-group">
+                    <div class="price-display active" data-currency="uah">100 UAH</div>
+                    <div class="price-display" data-currency="usd">~2.2 USD</div>
+                    <div class="price-display" data-currency="rub">~200 RUB</div>
                 </div>
-                
-                <!-- Тариф 3 (Популярный) -->
-                <div class="price-card bg-gray-700 rounded-lg overflow-hidden border border-gray-600 transition-all duration-300">
-                    <div class="bg-gradient-to-r from-purple-800 to-blue-800 py-4 px-6">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-xl font-bold">7 Дней</h3>
-                            <span class="bg-white text-purple-600 text-xs font-bold px-2 py-1 rounded-full">ВЫГОДА 15%</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-center mb-6">
-                            <span class="text-4xl font-bold uah-price">140</span>
-                            <span class="text-gray-400"> UAH</span>
-                            <div class="text-sm text-gray-400 mt-1 hidden usd-price">≈ 3.8 USD</div>
-                            <div class="text-sm text-gray-400 mt-1 hidden rub-price">≈ 280 RUB</div>
-                        </div>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-400 mr-2 glow"></i>
-                                <span>Полный функционал</span>
-                            </li>
-                        </ul>
-                        <a href="https://t.me/SilanOwner" target="_blank" class="block text-center btn-gradient text-white font-bold py-2 px-4 rounded transition">
-                            Заказать
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Тариф 4 -->
-                <div class="price-card bg-gray-700 rounded-lg overflow-hidden border border-gray-600 transition-all duration-300">
-                    <div class="bg-gradient-to-r from-purple-800 to-blue-800 py-4 px-6">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-xl font-bold">14 Дней</h3>
-                            <span class="bg-white text-purple-600 text-xs font-bold px-2 py-1 rounded-full">ВЫГОДА 30%</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-center mb-6">
-                            <span class="text-4xl font-bold uah-price">180</span>
-                            <span class="text-gray-400"> UAH</span>
-                            <div class="text-sm text-gray-400 mt-1 hidden usd-price">≈ 4.2 USD</div>
-                            <div class="text-sm text-gray-400 mt-1 hidden rub-price">≈ 360 RUB</div>
-                        </div>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-400 mr-2 glow"></i>
-                                <span>Полный функционал</span>
-                            </li>
-                        </ul>
-                         <a href="https://t.me/SilanOwner" target="_blank" class="block text-center btn-gradient text-white font-bold py-2 px-4 rounded transition">
-                            Заказать
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Тариф 5 -->
-                <div class="price-card bg-gray-700 rounded-lg overflow-hidden border border-gray-600 transition-all duration-300">
-                    <div class="bg-gradient-to-r from-purple-800 to-blue-800 py-4 px-6">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-xl font-bold">30 Дней</h3>
-                            <span class="bg-white text-purple-600 text-xs font-bold px-2 py-1 rounded-full">ВЫГОДА 50%</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-center mb-6">
-                            <span class="text-4xl font-bold uah-price">240</span>
-                            <span class="text-gray-400"> UAH</span>
-                            <div class="text-sm text-gray-400 mt-1 hidden usd-price">≈ 6 USD</div>
-                            <div class="text-sm text-gray-400 mt-1 hidden rub-price">≈ 480 RUB</div>
-                        </div>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-400 mr-2 glow"></i>
-                                <span>Полный функционал</span>
-                            </li>
-                        </ul>
-                        <a href="https://t.me/SilanOwner" target="_blank" class="block text-center btn-gradient text-white font-bold py-2 px-4 rounded transition">
-                            Заказать
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Тариф 6 -->
-                <div class="price-card bg-gray-700 rounded-lg overflow-hidden border border-gray-600 transition-all duration-300">
-                    <div class="bg-gradient-to-r from-purple-800 to-blue-800 py-4 px-6">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-xl font-bold">60 Дней</h3>
-                            <span class="bg-white text-purple-600 text-xs font-bold px-2 py-1 rounded-full">ВЫГОДА 100%</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-center mb-6">
-                            <span class="text-4xl font-bold uah-price">300</span>
-                            <span class="text-gray-400"> UAH</span>
-                            <div class="text-sm text-gray-400 mt-1 hidden usd-price">≈ 7.2 USD</div>
-                            <div class="text-sm text-gray-400 mt-1 hidden rub-price">≈ 600 RUB</div>
-                        </div>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-400 mr-2 glow"></i>
-                                <span>Полный функционал</span>
-                            </li>
-                        </ul>
-                        <a href="https://t.me/SilanOwner" target="_blank" class="block text-center btn-gradient text-white font-bold py-2 px-4 rounded transition">
-                            Заказать
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Тариф 7 (Life Time) -->
-                <div class="price-card bg-gray-700 rounded-lg overflow-hidden border border-gray-600 transition-all duration-300">
-                    <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 py-4 px-6">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-xl font-bold">Life Time </h3>
-                            <span class="bg-white text-purple-600 text-xs font-bold px-2 py-1 rounded-full">ВЫГОДА 333%</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-center mb-6">
-                            <span class="text-4xl font-bold uah-price">500</span>
-                            <span class="text-gray-400"> UAH</span>
-                            <div class="text-sm text-gray-400 mt-1 hidden usd-price">≈ 12 USD</div>
-                            <div class="text-sm text-gray-400 mt-1 hidden rub-price">≈ 1000 RUB</div>
-                        </div>
-                        <ul class="space-y-3 mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-400 mr-2 glow"></i>
-                                <span>Пожизненный доступ</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-400 mr-2 glow"></i>
-                                <span>Все будущие обновления</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check text-green-400 mr-2 glow"></i>
-                                <span>Полный фунционал</span>
-                            </li>
-                        </ul>
-                        <a href="https://t.me/SilanOwner" target="_blank" class="block text-center bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white font-bold py-3 px-6 rounded transition">
-                            Заказать LIFE TIME
-                        </a>
-                    </div>
-                </div>
+                <button class="plan-btn">Купить</button>
             </div>
-            
-            <div class="mt-12 text-center">
-                <a href="https://t.me/SilanOwner" target="_blank" class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full transition">
-                    <i class="fab fa-telegram-plane mr-2"></i> Написать в Telegram
-                </a>
+            <div class="plan">
+                <div class="plan-header">
+                    <span class="plan-name">7 ДНЕЙ</span>
+                </div>
+                <div class="price-group">
+                    <div class="price-display active" data-currency="uah">140 UAH</div>
+                    <div class="price-display" data-currency="usd">~3.8 USD</div>
+                    <div class="price-display" data-currency="rub">~280 RUB</div>
+                </div>
+                <button class="plan-btn">Купить</button>
+            </div>
+            <div class="plan">
+                <div class="plan-header">
+                    <span class="plan-name">14 ДНЕЙ</span>
+                </div>
+                <div class="price-group">
+                    <div class="price-display active" data-currency="uah">180 UAH</div>
+                    <div class="price-display" data-currency="usd">~4.2 USD</div>
+                    <div class="price-display" data-currency="rub">~360 RUB</div>
+                </div>
+                <button class="plan-btn">Купить</button>
+            </div>
+            <div class="plan">
+                <div class="plan-header">
+                    <span class="plan-name">30 ДНЕЙ</span>
+                </div>
+                <div class="price-group">
+                    <div class="price-display active" data-currency="uah">240 UAH</div>
+                    <div class="price-display" data-currency="usd">~6 USD</div>
+                    <div class="price-display" data-currency="rub">~480 RUB</div>
+                </div>
+                <button class="plan-btn">Купить</button>
+            </div>
+            <div class="plan">
+                <div class="plan-header">
+                    <span class="plan-name">60 ДНЕЙ</span>
+                </div>
+                <div class="price-group">
+                    <div class="price-display active" data-currency="uah">300 UAH</div>
+                    <div class="price-display" data-currency="usd">~7.2 USD</div>
+                    <div class="price-display" data-currency="rub">~600 RUB</div>
+                </div>
+                <button class="plan-btn">Купить</button>
+            </div>
+            <div class="plan lifetime">
+                <div class="plan-header">
+                    <span class="plan-name">LIFETIME</span>
+                </div>
+                <div class="price-group">
+                    <div class="price-display active" data-currency="uah">500 UAH</div>
+                    <div class="price-display" data-currency="usd">~12 USD</div>
+                    <div class="price-display" data-currency="rub">~1000 RUB</div>
+                </div>
+                <button class="plan-btn">Купить</button>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="py-16 bg-gray-900 bg-opacity-80">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 title-font">
-                <span class="blue-text glow">Частые</span> <span class="pink-text glow">вопросы</span>
-            </h2>
-            
-            <div class="space-y-4">
-                <!-- Вопрос 1 -->
-                <div class="bg-gray-800 rounded-lg overflow-hidden cyber-border">
-                    <button class="faq-question w-full text-left p-4 focus:outline-none flex justify-between items-center">
-                        <span class="font-medium">Как оплатить?</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-answer hidden p-4 pt-0 text-gray-300">
-                        <p>Оплата возможна через Telegram @SilanOwner следующими способами:</p>
-                        <ul class="list-disc pl-5 mt-2 space-y-1">
-                            <li> по договоренности</li>
-                        </ul>
-                    </div>
+    <section class="faq">
+        <h2>Частые вопросы</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Какие способы оплаты?</span>
                 </div>
-                
-                <!-- Вопрос 2 -->
-                <div class="bg-gray-800 rounded-lg overflow-hidden cyber-border">
-                    <button class="faq-question w-full text-left p-4 focus:outline-none flex justify-between items-center">
-                        <span class="font-medium">Есть ли гарантия от бана?</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-answer hidden p-4 pt-0 text-gray-300">
-                        <p>Мы используем передовые технологии маскировки, но 100% гарантии от бана не может дать никто. За 6 месяцев работы нашего софта:</p>
-                        <ul class="list-disc pl-5 mt-2 space-y-1">
-                            <li>Менее 1% пользователей получили бан (обычно при злоупотреблении)</li>
-                            <li>Средний срок использования без бана - 3+ месяца</li>
-                            <li>При правильном использовании риск минимален</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Вопрос 3 -->
-                <div class="bg-gray-800 rounded-lg overflow-hidden cyber-border">
-                    <button class="faq-question w-full text-left p-4 focus:outline-none flex justify-between items-center">
-                        <span class="font-medium">Поддержка Android/iOS?</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-answer hidden p-4 pt-0 text-gray-300">
-                        <p>На данный момент:</p>
-                        <ul class="list-disc pl-5 mt-2 space-y-1">
-                            <li><strong>Android:</strong> Полная поддержка без root (версии 7.0 и выше)</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Вопрос 4 -->
-                <div class="bg-gray-800 rounded-lg overflow-hidden cyber-border">
-                    <button class="faq-question w-full text-left p-4 focus:outline-none flex justify-between items-center">
-                        <span class="font-medium">Как часто обновляется чит?</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-answer hidden p-4 pt-0 text-gray-300">
-                        <p>Наш софт обновляется:</p>
-                        <ul class="list-disc pl-5 mt-2 space-y-1">
-                            <li>В течение 12-24 часов после выхода обновления PUBG Mobile</li>
-                            <li>Мелкие исправления - ежедневно при необходимости</li>
-                            <li>Крупные обновления с новыми функциями - 1-2 раза в месяц</li>
-                        </ul>
-                        <p class="mt-2">Все обновления бесплатны для текущих пользователей.</p>
-                    </div>
-                </div>
-                
-                <!-- Вопрос 5 -->
-                <div class="bg-gray-800 rounded-lg overflow-hidden cyber-border">
-                    <button class="faq-question w-full text-left p-4 focus:outline-none flex justify-between items-center">
-                        <span class="font-medium">Можно ли тестировать перед покупкой?</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-answer hidden p-4 pt-0 text-gray-300">
-                        <p>Да, мы предлагаем:</p>
-                        <ul class="list-disc pl-5 mt-2 space-y-1">
-                            <li>Тестовую версию на 1 час за 20 UAH (≈0.5 USD)</li>
-                            <li>Демо-доступ к основным функциям на 30 минут</li>
-                        </ul>
-                        <p class="mt-2">Тестовая версия помогает убедиться в работоспособности на вашем устройстве.</p>
-                    </div>
+                <div class="faq-answer">
+                    <p>по договености.</p>
                 </div>
             </div>
-            
-            <div class="mt-12 text-center">
-                <p class="text-gray-400 mb-4">Не нашли ответ на свой вопрос?</p>
-                <a href="https://t.me/SilanOwner" target="_blank" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition">
-                    <i class="fab fa-telegram-plane mr-2"></i> Задать вопрос
-                </a>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Есть ли гарантии?</span>
+                </div>
+                <div class="faq-answer">
+                    <p>97% пользователей не получают бан при правильном использовании. Мы постоянно обновляем наш софт для обхода античита. В случае бана в течение 3 дней после покупки - бесплатная замена ключа.</p>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Отзывы с аватарками -->
-    <section class="py-16 bg-gray-800 bg-opacity-80">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 title-font">
-                <span class="blue-text glow">Отзывы</span> <span class="pink-text glow">клиентов</span>
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Отзыв 1 -->
-                <div class="bg-gray-700 rounded-lg p-6 cyber-border">
-                    <div class="flex items-center mb-4">
-                        <img src="https://i.pravatar.cc/150?img=1" class="review-avatar mr-4" alt="Алексей">
-                        <div>
-                            <h4 class="font-bold">Алексей</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star glow"></i>
-                                <i class="fas fa-star glow"></i>
-                                <i class="fas fa-star glow"></i>
-                                <i class="fas fa-star glow"></i>
-                                <i class="fas fa-star glow"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-300">"Использую уже 3 месяца, ни одного бана. Aimbot просто бомба, особенно в ближнем бою. Поддержка отвечает быстро, помогли с настройкой."</p>
-                    <div class="mt-4 text-sm text-gray-500">12.05.2025</div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Какие требования?</span>
                 </div>
-                
-                <!-- Отзыв 2 -->
-                <div class="bg-gray-700 rounded-lg p-6 cyber-border">
-                    <div class="flex items-center mb-4">
-                        <img src="https://i.pravatar.cc/150?img=2" class="review-avatar mr-4" alt="Дмитрий">
-                        <div>
-                            <h4 class="font-bold">Дмитрий</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star glow"></i>
-                                <i class="fas fa-star glow"></i>
-                                <i class="fas fa-star glow"></i>
-                                <i class="fas fa-star glow"></i>
-                                <i class="fas fa-star-half-alt glow"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-300">"Купил на 7 дней для теста - все работает отлично. Разблокировка ФПС очень помогает на моем старом телефоне. Цена адекватная за такой функционал."</p>
-                    <div class="mt-4 text-sm text-gray-500">28.04.2025</div>
+                <div class="faq-answer">
+                    <p>Android 8.0 и выше, 2GB+ оперативной памяти. Не требуется root-доступ. Для iOS требуется jailbreak или сторонний магазин приложений.</p>
                 </div>
-                
-                <!-- Отзыв 3 -->
-                <div class="bg-gray-700 rounded-lg p-6 cyber-border">
-                    <div class="flex items-center mb-4">
-                        <img src="https://i.pravatar.cc/150?img=3" class="review-avatar mr-4" alt="Сергей">
-                        <div>
-                            <h4 class="font-bold">Сергей</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star glow"></i>
-                                <i class="fas fa-star glow"></i>
-                                <i class="fas fa-star glow"></i>
-                                <i class="fas fa-star glow"></i>
-                                <i class="fas fa-star glow"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-300">"Лучший чит из тех что пробовал. После обновления PUBG выкатили патч за 6 часов. Dead Box помогает находить лучший лут."</p>
-                    <div class="mt-4 text-sm text-gray-500">15.04.2025</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Как часто обновления?</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Обновления выходят в течение 4-8 часов после выхода патча игры. Все пользователи получают уведомление в Telegram о новом обновлении.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Как получить ключ после оплаты?</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Ключ активации приходит автоматически в течение 1-5 минут после оплаты на вашу электронную почту и в Telegram (если вы указали его при оплате).</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Контакты (упрощенный вариант) -->
-    <section id="contacts" class="py-16 bg-gray-900 bg-opacity-80">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 title-font">
-                <span class="pink-text glow">Наши</span> <span class="blue-text glow">контакты</span>
-            </h2>
-            
-            <div class="max-w-md mx-auto">
-                <div class="space-y-6">
-                    <div class="flex items-start">
-                        <div class="text-blue-400 text-2xl mr-4 glow">
-                            <i class="fab fa-telegram-plane"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold mb-1">Telegram</h4>
-                            <a href="https://t.me/+CkGDiuNae8U5M2Zi" target="_blank" class="text-blue-400 hover:underline glow">@Silan Cheat</a>
-                            <p class="text-gray-400 text-sm mt-1">Основной канал</p>
-                        </div>
+
+    <!-- Отзывы -->
+    <section class="testimonials">
+        <h2>Отзывы</h2>
+        <div class="reviews">
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">Использую уже 4 месяца — 0 банов. Чит реально невидимый для античита, в отличии от других. Поддержка всегда на связи и помогает с настройками.</p>
+                <div class="review-author">
+                    <div class="author-avatar">И</div>
+                    <div class="author-info">
+                        <div class="author-name">Иван</div>
+                        <div class="review-date">15.09.2023</div>
                     </div>
-                    
-                    <div class="flex items-start">
-                        <div class="text-blue-400 text-2xl mr-4 glow">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold mb-1">Email</h4>
-                            <a href="mailto:silancheat@gmail.com" class="text-blue-400 hover:underline glow">silancheat@gmail.com</a>
-                            <p class="text-gray-400 text-sm mt-1">Ответ в течение 24 часов</p>
-                        </div>
+                </div>
+            </div>
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">Топовый чит за свои деньги. AimBot работает идеально, особенно на дальних дистанциях. FPS действительно стал выше на 20-30 кадров.</p>
+                <div class="review-author">
+                    <div class="author-avatar">А</div>
+                    <div class="author-info">
+                        <div class="author-name">Александр</div>
+                        <div class="review-date">05.10.2023</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">Лучшая поддержка из всех, с чем сталкивался. Обновили чит через 3 часа после патча. Всем советую брать лицензию на 60 дней - выгоднее всего.</p>
+                <div class="review-author">
+                    <div class="author-avatar">М</div>
+                    <div class="author-info">
+                        <div class="author-name">Максим</div>
+                        <div class="review-date">22.08.2023</div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contacts">
+        <h2>Контакты</h2>
+        <div class="contact-methods">
+            <div class="contact-item">
+                <div class="contact-icon">💬</div>
+                <a href="https://t.me/ @OwnerCaesar" target="_blank">@OwnerCaesar</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📩</div>
+                <a href="manangercaesarsoft@gmail.com">manangercaesarsoft@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">⚠️</div>
+                <span>Только официальные контакты!</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Предупреждение -->
+    <section class="warning">
+        ⚠️ Использование на ваш риск. Не злоупотребляйте функциями, чтобы не привлекать внимание.
     </section>
 
     <!-- Футер -->
-    <footer class="bg-gray-900 py-8">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="flex items-center space-x-2 mb-4 md:mb-0">
-                    <i class="fas fa-fire text-blue-400 text-2xl glow"></i>
-                    <span class="title-font text-xl">
-                        <span class="pink-text">Silan</span> <span class="blue-text">CHEATS</span>
-                    </span>
-                </div>
-                
-                <div class="text-gray-400 text-sm text-center md:text-right">
-                    <p>© 2025 Silan Soft. Все права защищены.</p>
-                    <p class="mt-1">Используйте на свой страх и риск.</p>
-                </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Главная</a>
+                <a href="#">Тарифы</a>
+                <a href="#">FAQ</a>
+                <a href="#">Контакты</a>
+                <a href="#">Политика конфиденциальности</a>
             </div>
-            
-            <div class="mt-8 pt-6 border-t border-gray-800 text-center text-gray-500 text-xs">
-                <p class="mt-2">Мы не несем ответственности за возможные блокировки аккаунтов.</p>
+            <div class="copyright">
+                CAESAR SOFT 3.9v © 2023 | Все права защищены
             </div>
         </div>
     </footer>
 
     <script>
-        // Мобильное меню
-        document.getElementById('menuBtn').addEventListener('click', function() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        });
-
-        // FAQ аккордеон
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
+        // Анимация FAQ
+        document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const icon = question.querySelector('i');
+                const item = question.parentNode;
+                item.classList.toggle('active');
                 
-                answer.classList.toggle('hidden');
-                icon.classList.toggle('transform');
-                icon.classList.toggle('rotate-180');
-            });
-        });
-
-        // Переключение валют
-        const currencyButtons = {
-            'currencyUah': { button: document.getElementById('currencyUah'), prices: document.querySelectorAll('.uah-price'), others: ['.usd-price', '.rub-price'] },
-            'currencyUsd': { button: document.getElementById('currencyUsd'), prices: document.querySelectorAll('.usd-price'), others: ['.uah-price', '.rub-price'] },
-            'currencyRub': { button: document.getElementById('currencyRub'), prices: document.querySelectorAll('.rub-price'), others: ['.uah-price', '.usd-price'] }
-        };
-
-        function switchCurrency(activeId) {
-            // Обновляем кнопки
-            for (const [id, data] of Object.entries(currencyButtons)) {
-                if (id === activeId) {
-                    data.button.classList.remove('bg-gray-700');
-                    data.button.classList.add('bg-blue-600');
-                } else {
-                    data.button.classList.remove('bg-blue-600');
-                    data.button.classList.add('bg-gray-700');
-                }
-            }
-
-            // Обновляем цены
-            for (const [id, data] of Object.entries(currencyButtons)) {
-                if (id === activeId) {
-                    data.prices.forEach(price => price.classList.remove('hidden'));
-                    
-                    // Скрываем другие валюты
-                    data.others.forEach(otherClass => {
-                        document.querySelectorAll(otherClass).forEach(el => el.classList.add('hidden'));
-                    });
-                }
-            }
-        }
-
-        // Инициализация валют
-        switchCurrency('currencyUah');
-
-        // Обработчики кликов
-        document.getElementById('currencyUah').addEventListener('click', () => switchCurrency('currencyUah'));
-        document.getElementById('currencyUsd').addEventListener('click', () => switchCurrency('currencyUsd'));
-        document.getElementById('currencyRub').addEventListener('click', () => switchCurrency('currencyRub'));
-
-        // Плавная прокрутка для якорных ссылок
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Закрываем мобильное меню если открыто
-                    const mobileMenu = document.getElementById('mobileMenu');
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
+                // Закрываем другие открытые вопросы
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
                     }
-                }
+                });
             });
         });
 
-        // Анимация при скролле
+        // Анимация появления элементов при скролле
         const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.feature-card, .price-card');
+            const elements = document.querySelectorAll('.card, .step, .plan, .review, .contact-item');
             
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
                 const screenPosition = window.innerHeight / 1.2;
                 
                 if (elementPosition < screenPosition) {
-                    element.classList.add('fade-in');
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
                 }
             });
         };
 
-        window.addEventListener('scroll', animateOnScroll);
-        window.addEventListener('load', animateOnScroll);
+        // Инициализация анимаций при загрузке
+        document.addEventListener('DOMContentLoaded', () => {
+            const steps = document.querySelectorAll('.step');
+            steps.forEach(step => {
+                step.style.opacity = '1';
+            });
+            
+            // Добавляем обработчик скролла
+            window.addEventListener('scroll', animateOnScroll);
+            // Запускаем сразу для видимых элементов
+            animateOnScroll();
+        });
+
+        // Кнопка "Купить сейчас"
+        document.querySelector('.btn').addEventListener('click', () => {
+            window.scrollTo({
+                top: document.querySelector('.pricing').offsetTop - 80,
+                behavior: 'smooth'
+            });
+        });
+
+        // Кнопки выбора тарифа
+        document.querySelectorAll('.plan-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                window.location.href = 'https://t.me/ @OwnerCaesar';
+            });
+        });
+
+        // Слайдер
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+        
+        // Навигация по точкам
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+        
+        // Стрелки
+        document.querySelector('.slider-arrow.prev').addEventListener('click', () => showSlide(currentSlide - 1));
+        document.querySelector('.slider-arrow.next').addEventListener('click', () => showSlide(currentSlide + 1));
+        
+        // Автоматическая смена слайдов
+        setInterval(() => showSlide(currentSlide + 1), 5000);
+        
+        // Инициализация первого слайда
+        showSlide(0);
+        
+        // Переключение валют
+        document.querySelectorAll('.currency-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Удаляем активный класс у всех кнопок
+                document.querySelectorAll('.currency-btn').forEach(b => b.classList.remove('active'));
+                // Добавляем активный класс текущей кнопке
+                this.classList.add('active');
+                
+                const currency = this.dataset.currency;
+                
+                // Скрываем все отображения цен
+                document.querySelectorAll('.price-display').forEach(price => {
+                    price.classList.remove('active');
+                });
+                
+                // Показываем только выбранную валюту
+                document.querySelectorAll(`.price-display[data-currency="${currency}"]`).forEach(price => {
+                    price.classList.add('active');
+                });
+            });
+        });
     </script>
 </body>
-                            </html>
+    </html>
