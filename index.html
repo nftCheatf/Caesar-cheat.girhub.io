@@ -1530,7 +1530,6 @@
         </div>
     </section>
 
-
     <!-- Отзывы -->
     <section class="testimonials">
         <h2>Отзывы</h2>
@@ -1577,11 +1576,11 @@
         <div class="contact-methods">
             <div class="contact-item">
                 <div class="contact-icon">💬</div>
-                <a href="https://t.me/ @OwnerCaesar" target="_blank">@OwnerCaesar</a>
+                <a href="https://t.me/OwnerCaesar" target="_blank">@OwnerCaesar</a>
             </div>
             <div class="contact-item">
                 <div class="contact-icon">📩</div>
-                <a href="manangercaesarsoft@gmail.com">manangercaesarsoft@gmail.com</a>
+                <a href="mailto:manangercaesarsoft@gmail.com">manangercaesarsoft@gmail.com</a>
             </div>
             <div class="contact-item">
                 <div class="contact-icon">⚠️</div>
@@ -1612,113 +1611,82 @@
     </footer>
 
     <script>
-        // Анимация FAQ
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentNode;
-                item.classList.toggle('active');
-                
-                // Закрываем другие открытые вопросы
-                document.querySelectorAll('.faq-item').forEach(otherItem => {
-                    if (otherItem !== item && otherItem.classList.contains('active')) {
-                        otherItem.classList.remove('active');
-                    }
+        // Ждем полной загрузки DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анимация FAQ
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', () => {
+                    const item = question.parentNode;
+                    item.classList.toggle('active');
+                    
+                    // Закрываем другие открытые вопросы
+                    document.querySelectorAll('.faq-item').forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
                 });
             });
-        });
 
-        // Анимация появления элементов при скролле
-        const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.card, .step, .plan, .review, .contact-item');
-            
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.2;
+            // Кнопка "Купить сейчас" в герое
+            const heroBtn = document.querySelector('.hero .btn');
+            if (heroBtn) {
+                heroBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: document.querySelector('.pricing').offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Кнопки выбора тарифа
+            document.querySelectorAll('.plan-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    window.open('https://t.me/OwnerCaesar', '_blank');
+                });
+            });
+
+            // Переключение валют
+            document.querySelectorAll('.currency-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Удаляем активный класс у всех кнопок
+                    document.querySelectorAll('.currency-btn').forEach(b => b.classList.remove('active'));
+                    // Добавляем активный класс текущей кнопке
+                    this.classList.add('active');
+                    
+                    const currency = this.dataset.currency;
+                    
+                    // Скрываем все отображения цен
+                    document.querySelectorAll('.price-display').forEach(price => {
+                        price.classList.remove('active');
+                    });
+                    
+                    // Показываем только выбранную валюту
+                    document.querySelectorAll(`.price-display[data-currency="${currency}"]`).forEach(price => {
+                        price.classList.add('active');
+                    });
+                });
+            });
+
+            // Анимация появления элементов при скролле
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.card, .step, .plan, .review, .contact-item');
                 
-                if (elementPosition < screenPosition) {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
-                }
-            });
-        };
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
 
-        // Инициализация анимаций при загрузке
-        document.addEventListener('DOMContentLoaded', () => {
-            const steps = document.querySelectorAll('.step');
-            steps.forEach(step => {
-                step.style.opacity = '1';
-            });
-            
             // Добавляем обработчик скролла
             window.addEventListener('scroll', animateOnScroll);
             // Запускаем сразу для видимых элементов
             animateOnScroll();
-        });
-
-        // Кнопка "Купить сейчас"
-        document.querySelector('.btn').addEventListener('click', () => {
-            window.scrollTo({
-                top: document.querySelector('.pricing').offsetTop - 80,
-                behavior: 'smooth'
-            });
-        });
-
-        // Кнопки выбора тарифа
-        document.querySelectorAll('.plan-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                window.location.href = 'https://t.me/ @OwnerCaesar';
-            });
-        });
-
-        // Слайдер
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.slider-dot');
-        
-        function showSlide(n) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            
-            currentSlide = (n + slides.length) % slides.length;
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
-        }
-        
-        // Навигация по точкам
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => showSlide(index));
-        });
-        
-        // Стрелки
-        document.querySelector('.slider-arrow.prev').addEventListener('click', () => showSlide(currentSlide - 1));
-        document.querySelector('.slider-arrow.next').addEventListener('click', () => showSlide(currentSlide + 1));
-        
-        // Автоматическая смена слайдов
-        setInterval(() => showSlide(currentSlide + 1), 5000);
-        
-        // Инициализация первого слайда
-        showSlide(0);
-        
-        // Переключение валют
-        document.querySelectorAll('.currency-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                // Удаляем активный класс у всех кнопок
-                document.querySelectorAll('.currency-btn').forEach(b => b.classList.remove('active'));
-                // Добавляем активный класс текущей кнопке
-                this.classList.add('active');
-                
-                const currency = this.dataset.currency;
-                
-                // Скрываем все отображения цен
-                document.querySelectorAll('.price-display').forEach(price => {
-                    price.classList.remove('active');
-                });
-                
-                // Показываем только выбранную валюту
-                document.querySelectorAll(`.price-display[data-currency="${currency}"]`).forEach(price => {
-                    price.classList.add('active');
-                });
-            });
         });
     </script>
 </body>
